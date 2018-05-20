@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "80f19a62-fb24-40d0-ba1f-e8934b4447ec",
+		"name": "CrudApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc956247-1791-4920-afee-b0838450c8a6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"Name\": \"Raphael Lima\",\n\"DocumentNumber\": \"01234567890\",\n\"Address\": \"Guaibe\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\",\n\"Income\": 1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:53615/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53615",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"PersonId\": \"3\",\n\"Name\": \"Raphael Lima\",\n\"DocumentNumber\": \"01234567890\",\n\"Address\": \"Guaibe\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\",\n\"Income\": 1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:53615/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53615",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"PersonId\": \"2\",\n\"Name\": \"Raphael Lima - Updated\",\n\"DocumentNumber\": \"01234567890\",\n\"Address\": \"Guaibe\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\",\n\"Income\": 1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:53615/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53615",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:53615/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53615",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:53615/api/person/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53615",
+					"path": [
+						"api",
+						"person",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Person Error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"Name\": \"Raphael Lima shufhsiufhsdiufhsdiufhsdiufhsidufhiusdhfiudshf\",\n\"DocumentNumber\": \"012345678901334\",\n\"Address\": \"Guaibe sdfuhsdiufhsdiufhsiudfoisdjfoisdjfoisdjfuihsdfjsdiofjuisdhfiusdhjhfusdfuhsdiufhsdiufhsiudfoisdjfoisdjfoisdjfuihsdfjsdiofjuisdhfiusdhjhfu\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:53615/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53615",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
