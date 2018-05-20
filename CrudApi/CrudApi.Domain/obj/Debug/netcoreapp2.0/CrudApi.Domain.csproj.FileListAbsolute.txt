@@ -1,0 +1,9 @@
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\bin\Debug\netcoreapp2.0\CrudApi.Domain.deps.json
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\bin\Debug\netcoreapp2.0\CrudApi.Domain.dll
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\bin\Debug\netcoreapp2.0\CrudApi.Domain.pdb
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\obj\Debug\netcoreapp2.0\CrudApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\obj\Debug\netcoreapp2.0\CrudApi.Domain.AssemblyInfoInputs.cache
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\obj\Debug\netcoreapp2.0\CrudApi.Domain.AssemblyInfo.cs
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\obj\Debug\netcoreapp2.0\CrudApi.Domain.dll
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\obj\Debug\netcoreapp2.0\CrudApi.Domain.pdb
+C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Domain\obj\Debug\netcoreapp2.0\CrudApi.Domain.csprojResolveAssemblyReference.cache
