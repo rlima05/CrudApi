@@ -11,10 +11,14 @@ namespace CrudApi.Controllers
     public class PersonController : Controller
     {
         private readonly IPersonAppService _personAppService;
+        
+
 
         public PersonController(IPersonAppService personAppService)
         {
             _personAppService = personAppService;
+            
+            
         }
 
         [HttpGet()]
@@ -40,6 +44,8 @@ namespace CrudApi.Controllers
         [HttpPost()]
         public IActionResult CreatePerson([FromBody] Models.Person person)
         {
+            
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -47,7 +53,9 @@ namespace CrudApi.Controllers
 
             var personEntity = Mapper.Map<Domain.Entities.Person>(person);
 
-            _personAppService.Add(personEntity);
+            
+
+           _personAppService.Add(personEntity);
 
             return Ok();
         }
@@ -59,6 +67,8 @@ namespace CrudApi.Controllers
                 return BadRequest();
 
             var personEntity = Mapper.Map<Domain.Entities.Person>(person);
+
+            
 
             _personAppService.Update(personEntity);
 

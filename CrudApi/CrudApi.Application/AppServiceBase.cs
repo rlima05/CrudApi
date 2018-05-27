@@ -15,9 +15,9 @@ namespace CrudApi.Application
             _serviceBase = serviceBase;
         }
 
-        public void Add(T obj)
+        public int Add(T obj)
         {
-            _serviceBase.Add(obj);
+            return _serviceBase.Add(obj);
         }
 
         public T GetById(int id)

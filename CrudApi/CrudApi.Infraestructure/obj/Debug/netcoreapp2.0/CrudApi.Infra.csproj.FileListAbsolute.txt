@@ -9,3 +9,14 @@ C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Infraestructure\obj\De
 C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.pdb
 C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Domain.dll
 C:\Users\raphael.l.fernandes\source\repos\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Domain.pdb
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Infra.deps.json
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Infra.dll
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Infra.pdb
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Domain.dll
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\bin\Debug\netcoreapp2.0\CrudApi.Domain.pdb
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.csprojResolveAssemblyReference.cache
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.csproj.CoreCompileInputs.cache
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.AssemblyInfoInputs.cache
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.AssemblyInfo.cs
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.dll
+C:\Users\raphael.l.fernandes\Documents\GitHub\CrudApi\CrudApi\CrudApi.Infraestructure\obj\Debug\netcoreapp2.0\CrudApi.Infra.pdb

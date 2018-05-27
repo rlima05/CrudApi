@@ -4,7 +4,7 @@ namespace CrudApi.Application.Interface
 {
     public interface IAppServiceBase<T>
     {
-        void Add(T obj);
+        int Add(T obj);
         T GetById(int id);
         IEnumerable<T> GetAll();
         void Update(T obj);

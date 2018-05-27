@@ -5,7 +5,7 @@ using CrudApi.Domain.Interface.Repositories;
 using CrudApi.Domain.Interface.Services;
 using CrudApi.Domain.Services;
 using CrudApi.Infra;
-using CrudApi.Infra.Repositoies;
+using CrudApi.Infra.Repositories;
 using CrudApi.Models.Validation;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -33,14 +33,34 @@ namespace CrudApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //Redis
+            services.AddDistributedRedisCache(options =>
+            {
+                options.Configuration =
+                    Configuration.GetConnectionString("RedisConnection");
+                options.InstanceName = "RaphaelRedisTest";
+            });
+
+
             //Dependency Injection
             services.AddTransient(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             services.AddTransient(typeof(IServiceBase<>), typeof(ServiceBase<>));
             services.AddTransient(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
 
+            services.AddTransient<IRepositoryBaseRedis, RepositoryBaseRedis>();
+            services.AddTransient(typeof(IServiceBaseRedis<>), typeof(ServiceBaseRedis<>));
+            services.AddTransient(typeof(IAppServiceBaseRedis<>), typeof(AppServiceBaseRedis<>));
+
+            
             services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IPersonService, PersonService>();
             services.AddTransient<IPersonAppService, PersonAppService>();
+
+            services.AddTransient<IPersonAppServiceRedis, PersonAppServiceRedis>();
+            services.AddTransient<IPersonServiceRedis, PersonServiceRedis>();
+            services.AddTransient<IPersonRepositoryRedis, PersonRepositoryRedis>();
+
+            services.AddTransient<IReflectionService, ReflectionService>();
 
             services.AddTransient<IValidator<Models.Person>, PersonValidator>();
 
@@ -50,7 +70,7 @@ namespace CrudApi
                     new XmlDataContractSerializerOutputFormatter()))
                 .AddFluentValidation();
 
-            var connectionString = Startup.Configuration["connectionStrings:personDbConnectionString"];
+            var connectionString = Configuration["connectionStrings:personDbConnectionString"];
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<CrudApiContext>(
                     options => options.UseSqlServer(connectionString));

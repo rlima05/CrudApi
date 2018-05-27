@@ -5,7 +5,7 @@ namespace CrudApi.Domain.Interface.Repositories
     public interface IRepositoryBase<TEntity> 
     {
 
-        void Add(TEntity obj);
+        int Add(TEntity obj);
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();
         void Update(TEntity obj);

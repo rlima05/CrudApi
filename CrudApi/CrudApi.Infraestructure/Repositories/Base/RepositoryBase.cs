@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using CrudApi.Domain.Interface.Repositories;
+using CrudApi.Domain.Interface.Services;
 using Microsoft.EntityFrameworkCore;
 
-namespace CrudApi.Infra.Repositoies
+namespace CrudApi.Infra.Repositories
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T: class
     {
         private CrudApiContext Db;
+        private readonly IReflectionService _reflectionService;
 
-        public RepositoryBase(CrudApiContext db)
+        public RepositoryBase(CrudApiContext db, IReflectionService reflectionService)
         {
             Db = db;
+            _reflectionService = reflectionService;
         }
 
-        public void Add(T obj)
+        public int Add(T obj)
         {
             Db.Set<T>().Add(obj);
             Db.SaveChanges();
+
+            return _reflectionService.GetObjectId(obj);
         }
 
         

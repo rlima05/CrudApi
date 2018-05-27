@@ -6,7 +6,7 @@ namespace CrudApi.Domain.Interface.Services
 {
     public interface IServiceBase<TEntity>
     {
-        void Add(TEntity obj);
+        int Add(TEntity obj);
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();
         void Update(TEntity obj);

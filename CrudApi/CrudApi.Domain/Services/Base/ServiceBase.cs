@@ -16,9 +16,9 @@ namespace CrudApi.Domain.Services
             _repository = repository;
         }
 
-        public void Add(T obj)
+        public int Add(T obj)
         {
-            _repository.Add(obj);
+            return _repository.Add(obj);
         }
 
 
