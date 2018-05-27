@@ -6,6 +6,133 @@
 	},
 	"item": [
 		{
+			"name": "Redis",
+			"description": "",
+			"item": [
+				{
+					"name": "Delete Person Redis",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"PersonId\": \"3\",\n\"Name\": \"Raphael Lima\",\n\"DocumentNumber\": \"01234567890\",\n\"Address\": \"Guaibe\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\",\n\"Income\": 1000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:53615/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53615",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Person Redis",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"PersonId\": \"2\",\n\"Name\": \"Raphael Lima - Updated\",\n\"DocumentNumber\": \"01234567890\",\n\"Address\": \"Guaibe\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\",\n\"Income\": 1000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:53615/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53615",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID Redis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:53615/api/person/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53615",
+							"path": [
+								"api",
+								"person",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Person Redis",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc956247-1791-4920-afee-b0838450c8a6",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"Name\": \"Raphael Lima\",\n\"DocumentNumber\": \"01234567890\",\n\"Address\": \"Guaibe\",\n\"IsEmployed\": true,\n\"BirthDate\": \"1991-04-30\",\n\"Income\": 1000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:53615/api/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53615",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Create Person",
 			"event": [
 				{
